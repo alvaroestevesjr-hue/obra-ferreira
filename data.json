@@ -1,0 +1,518 @@
+{
+ "ok": true,
+ "checklist": [
+  {
+   "num": 1,
+   "disciplina": "Hidráulica",
+   "item": "Muitos ralos, aproveitando os shafts",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Definir posição de cada ralo e a descida pelos shafts no projeto hidrossanitário."
+  },
+  {
+   "num": 2,
+   "disciplina": "Hidráulica",
+   "item": "Ralo do banheiro com boa vazão e tubo mais grosso (chuveiro com pressurizador)",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Saída DN 75 ou ralo linear no box. Ralo comum com saída 50 tende a transbordar."
+  },
+  {
+   "num": 3,
+   "disciplina": "Hidráulica",
+   "item": "Passagens hidráulicas na laje com camisas (não concretar canos de água e esgoto)",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Eletroduto pode ir embutido no concreto. Água e esgoto passam por camisas ou shafts, para permitir manutenção. Dicas de tubulação: youtube.com/watch?v=LfnxmtE5GGg"
+  },
+  {
+   "num": 4,
+   "disciplina": "Hidráulica",
+   "item": "Drenos dos ar-condicionados",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Rota até ralo ou descida pluvial, com caimento contínuo."
+  },
+  {
+   "num": 5,
+   "disciplina": "Hidráulica",
+   "item": "Piscina: tubulação e ralo na parede",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Integrar ao detalhe de impermeabilização da piscina (sistema Sika) já elaborado."
+  },
+  {
+   "num": 6,
+   "disciplina": "Hidráulica",
+   "item": "Rede de gás até a bancada da pia (se confirmar as 2 bocas a gás)",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Central de gás, tubulação e ventilação permanente (NBR 15526). Depende da decisão do cooktop."
+  },
+  {
+   "num": 7,
+   "disciplina": "Hidráulica",
+   "item": "Caixas de aço inox",
+   "responsavel": "Álvaro",
+   "fase": "Decisão",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Confirmar com o Ferreira o que são (ralo/caixa sifonada inox ou outro item do vídeo de 25/10)."
+  },
+  {
+   "num": 8,
+   "disciplina": "Hidráulica",
+   "item": "Identificação dos canos por sistema (cor ou etiqueta)",
+   "responsavel": "Álvaro",
+   "fase": "Embutidos na alvenaria",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Água fria, água quente, esgoto e pluvial identificados. Fotografar tudo antes de fechar as paredes. Vídeo: youtube.com/watch?v=K7DIIKK_sA8"
+  },
+  {
+   "num": 9,
+   "disciplina": "Hidráulica",
+   "item": "Registros sempre embutidos; aparentes só nas pias do banheiro e da cozinha",
+   "responsavel": "Álvaro",
+   "fase": "Embutidos na alvenaria",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Registros de gaveta e de pressão com acabamento de parede, em local acessível."
+  },
+  {
+   "num": 10,
+   "disciplina": "Hidráulica",
+   "item": "Água e esgoto para a cuba pequena de apoio na bancada central",
+   "responsavel": "Álvaro",
+   "fase": "Embutidos na alvenaria",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Esgoto pelo piso: definir antes do contrapiso."
+  },
+  {
+   "num": 11,
+   "disciplina": "Elétrica",
+   "item": "Pontos elétricos dos ar-condicionados (circuitos dedicados)",
+   "responsavel": "Fernando",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": ""
+  },
+  {
+   "num": 12,
+   "disciplina": "Elétrica",
+   "item": "Eletrodutos na laje para todos os dispositivos (iluminação, AC, som)",
+   "responsavel": "Fernando",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Embutir antes da concretagem."
+  },
+  {
+   "num": 13,
+   "disciplina": "Elétrica",
+   "item": "Infraestrutura de sonorização (caixas embutidas e cabeamento)",
+   "responsavel": "Fernando",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Definir posição das caixas de som com a arquitetura."
+  },
+  {
+   "num": 14,
+   "disciplina": "Elétrica",
+   "item": "Alimentação do motor de exaustão da coifa no telhado",
+   "responsavel": "Fernando",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": ""
+  },
+  {
+   "num": 15,
+   "disciplina": "Elétrica",
+   "item": "Iluminação nos móveis sobre a pia",
+   "responsavel": "Fernando",
+   "fase": "Embutidos na alvenaria",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Ponto de alimentação e local do driver de LED, combinados com a marcenaria."
+  },
+  {
+   "num": 16,
+   "disciplina": "Elétrica",
+   "item": "Circuito dedicado do cooktop de indução",
+   "responsavel": "Fernando",
+   "fase": "Embutidos na alvenaria",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Potência conforme o modelo escolhido."
+  },
+  {
+   "num": 17,
+   "disciplina": "Arquitetura",
+   "item": "Escada de acesso ao telhado/laje com alçapão",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10 e 25/10",
+   "obs": "Definir local e abertura na laje."
+  },
+  {
+   "num": 18,
+   "disciplina": "Arquitetura",
+   "item": "Posição dos shafts (hidráulica, coifa, ar-condicionado)",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": ""
+  },
+  {
+   "num": 19,
+   "disciplina": "Arquitetura",
+   "item": "Posição das evaporadoras e condensadoras dos ar-condicionados",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": ""
+  },
+  {
+   "num": 20,
+   "disciplina": "Arquitetura",
+   "item": "Duto da coifa passando pelo shaft e saindo pelo telhado",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Diâmetro em torno de 150 mm, com chapéu na saída. Prever passagem na laje."
+  },
+  {
+   "num": 21,
+   "disciplina": "Arquitetura",
+   "item": "Coifa embutida na marcenaria com motor de exaustão no telhado",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Motor remoto reduz o ruído na cozinha. Vídeo: youtube.com/watch?v=zCaerqndCEE"
+  },
+  {
+   "num": 22,
+   "disciplina": "Arquitetura",
+   "item": "Layout da cozinha: cooktop no balcão e 2 bocas na bancada da pia",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Decisão",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "As 2 bocas na pia são para frituras, para não espalhar cheiro pela casa."
+  },
+  {
+   "num": 23,
+   "disciplina": "Arquitetura",
+   "item": "Projeto e cotação das esquadrias (etapa mais demorada)",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Contratação",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Contratar com os vãos de projeto; medição final na obra após a alvenaria."
+  },
+  {
+   "num": 24,
+   "disciplina": "Acabamento",
+   "item": "Cantoneiras de proteção nas colunas e quinas",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Embutidos na alvenaria",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Definir material antes do reboco."
+  },
+  {
+   "num": 25,
+   "disciplina": "Acabamento",
+   "item": "Pia com rebaixo italiano",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Acabamento",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Detalhar na bancada e na marcenaria."
+  },
+  {
+   "num": 26,
+   "disciplina": "Acabamento",
+   "item": "Contratação do piso flutuante",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Contratação",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Instalação no fim, sobre contrapiso nivelado e seco."
+  },
+  {
+   "num": 27,
+   "disciplina": "Acabamento",
+   "item": "Projeto da marcenaria da cozinha (coifa, iluminação, cuba de apoio)",
+   "responsavel": "Cláudia Cunha",
+   "fase": "Contratação",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": ""
+  },
+  {
+   "num": 28,
+   "disciplina": "Estrutura e cobertura",
+   "item": "Mapa de passagens da laje, compatibilizando todas as disciplinas",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Conferir camisas, eletrodutos, duto da coifa, ralos e alçapão antes de liberar a concretagem."
+  },
+  {
+   "num": 29,
+   "disciplina": "Estrutura e cobertura",
+   "item": "Avisar o momento de entrada do eletricista e do encanador",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Entram na montagem de fôrmas e armação da laje, antes da concretagem. Voltam na alvenaria, antes do reboco."
+  },
+  {
+   "num": 30,
+   "disciplina": "Estrutura e cobertura",
+   "item": "Impermeabilização da laje: manta asfáltica, contrapiso e manta emborrachada",
+   "responsavel": "Álvaro",
+   "fase": "Cobertura",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": "Regularização com caimento mínimo de 1% para os ralos antes da manta."
+  },
+  {
+   "num": 31,
+   "disciplina": "Estrutura e cobertura",
+   "item": "Cronograma das próximas etapas",
+   "responsavel": "Álvaro",
+   "fase": "Contratação",
+   "status": "Em andamento",
+   "pedido": "25/10",
+   "obs": "Na aba Cronograma. Ajustar as datas conforme a obra."
+  },
+  {
+   "num": 32,
+   "disciplina": "Decisões do cliente",
+   "item": "Cooktop de indução × gás (indução no balcão e 2 bocas a gás na pia)",
+   "responsavel": "Ferreira",
+   "fase": "Decisão",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": "Decidir antes da laje: muda rede de gás, circuito elétrico e duto."
+  },
+  {
+   "num": 33,
+   "disciplina": "Decisões do cliente",
+   "item": "Quantidade e posição dos ar-condicionados",
+   "responsavel": "Ferreira",
+   "fase": "Decisão",
+   "status": "Pendente",
+   "pedido": "12/10",
+   "obs": ""
+  },
+  {
+   "num": 34,
+   "disciplina": "Decisões do cliente",
+   "item": "Ambientes com sonorização",
+   "responsavel": "Ferreira",
+   "fase": "Decisão",
+   "status": "Pendente",
+   "pedido": "25/10",
+   "obs": ""
+  }
+ ],
+ "cronograma": [
+  {
+   "num": 1,
+   "etapa": "Fechar decisões do cliente (cozinha, ACs, som, caixas inox)",
+   "responsavel": "Ferreira",
+   "inicio": "2026-10-27",
+   "fim": "2026-11-06",
+   "dias": 11,
+   "status": "Em andamento",
+   "obs": "Trava as passagens da laje."
+  },
+  {
+   "num": 2,
+   "etapa": "Detalhes de arquitetura: shafts, escada do telhado, coifa, ACs",
+   "responsavel": "Cláudia Cunha",
+   "inicio": "2026-10-27",
+   "fim": "2026-11-11",
+   "dias": 16,
+   "status": "Previsto",
+   "obs": ""
+  },
+  {
+   "num": 3,
+   "etapa": "Projeto elétrico com pontos de AC, som, coifa e cooktop",
+   "responsavel": "Fernando",
+   "inicio": "2026-11-03",
+   "fim": "2026-11-13",
+   "dias": 11,
+   "status": "Previsto",
+   "obs": ""
+  },
+  {
+   "num": 4,
+   "etapa": "Projeto hidrossanitário e mapa de passagens da laje",
+   "responsavel": "Álvaro",
+   "inicio": "2026-11-03",
+   "fim": "2026-11-13",
+   "dias": 11,
+   "status": "Previsto",
+   "obs": "Compatibilizar todas as disciplinas."
+  },
+  {
+   "num": 5,
+   "etapa": "Cotação e contratação das esquadrias",
+   "responsavel": "Cláudia Cunha",
+   "inicio": "2026-11-09",
+   "fim": "2026-12-04",
+   "dias": 26,
+   "status": "Previsto",
+   "obs": "Fabricação costuma ser longa; confirmar prazo com o fornecedor."
+  },
+  {
+   "num": 6,
+   "etapa": "Fôrmas e armação da laje",
+   "responsavel": "Equipe da obra",
+   "inicio": "2026-11-16",
+   "fim": "2026-11-27",
+   "dias": 12,
+   "status": "Previsto",
+   "obs": ""
+  },
+  {
+   "num": 7,
+   "etapa": "Passagens, camisas e eletrodutos na laje (eletricista e encanador)",
+   "responsavel": "Fernando / Álvaro",
+   "inicio": "2026-11-23",
+   "fim": "2026-11-28",
+   "dias": 6,
+   "status": "Previsto",
+   "obs": "Conferir o mapa de passagens antes de liberar a concretagem."
+  },
+  {
+   "num": 8,
+   "etapa": "Concretagem da laje",
+   "responsavel": "Álvaro",
+   "inicio": "2026-12-01",
+   "fim": "2026-12-01",
+   "dias": 1,
+   "status": "Previsto",
+   "obs": ""
+  },
+  {
+   "num": 9,
+   "etapa": "Cura e desforma da laje",
+   "responsavel": "Equipe da obra",
+   "inicio": "2026-12-02",
+   "fim": "2026-12-22",
+   "dias": 21,
+   "status": "Previsto",
+   "obs": "Escoramento conforme projeto estrutural."
+  },
+  {
+   "num": 10,
+   "etapa": "Recesso de fim de ano",
+   "responsavel": "",
+   "inicio": "2026-12-23",
+   "fim": "2027-01-04",
+   "dias": 13,
+   "status": "Previsto",
+   "obs": ""
+  },
+  {
+   "num": 11,
+   "etapa": "Impermeabilização da cobertura (manta, contrapiso e membrana)",
+   "responsavel": "Álvaro",
+   "inicio": "2027-01-05",
+   "fim": "2027-01-22",
+   "dias": 18,
+   "status": "Previsto",
+   "obs": "Caimento mínimo de 1% para os ralos."
+  },
+  {
+   "num": 12,
+   "etapa": "Instalações embutidas na alvenaria (hidráulica e elétrica)",
+   "responsavel": "Álvaro / Fernando",
+   "inicio": "2027-01-05",
+   "fim": "2027-01-29",
+   "dias": 25,
+   "status": "Previsto",
+   "obs": "Identificar canos e fotografar antes de fechar."
+  },
+  {
+   "num": 13,
+   "etapa": "Reboco",
+   "responsavel": "Equipe da obra",
+   "inicio": "2027-02-01",
+   "fim": "2027-02-26",
+   "dias": 26,
+   "status": "Previsto",
+   "obs": "Cantoneiras das quinas definidas antes."
+  },
+  {
+   "num": 14,
+   "etapa": "Contratação do piso flutuante",
+   "responsavel": "Cláudia Cunha",
+   "inicio": "2027-02-01",
+   "fim": "2027-02-26",
+   "dias": 26,
+   "status": "Previsto",
+   "obs": "Instalação no fim da obra."
+  },
+  {
+   "num": 15,
+   "etapa": "Contrapiso e impermeabilização das áreas molhadas",
+   "responsavel": "Álvaro",
+   "inicio": "2027-03-01",
+   "fim": "2027-03-19",
+   "dias": 19,
+   "status": "Previsto",
+   "obs": ""
+  },
+  {
+   "num": 16,
+   "etapa": "Medição e fabricação da marcenaria",
+   "responsavel": "Cláudia Cunha",
+   "inicio": "2027-03-01",
+   "fim": "2027-04-30",
+   "dias": 61,
+   "status": "Previsto",
+   "obs": "Coifa, iluminação e cuba de apoio incluídas."
+  },
+  {
+   "num": 17,
+   "etapa": "Instalação das esquadrias",
+   "responsavel": "Cláudia Cunha",
+   "inicio": "2027-03-15",
+   "fim": "2027-03-26",
+   "dias": 12,
+   "status": "Previsto",
+   "obs": ""
+  }
+ ],
+ "atualizado": "2026-10-26T19:20:00Z"
+}
