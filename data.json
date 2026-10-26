@@ -514,5 +514,101 @@
    "obs": ""
   }
  ],
- "atualizado": "2026-10-26T19:20:00Z"
+ "atualizado": "2026-10-26T19:20:00Z",
+ "medicoes": [
+  {
+   "num": 1,
+   "data": "",
+   "servico": "Vigas baldrames (mão de obra)",
+   "executor": "Marco Antonio Gomes",
+   "parcela": "Parcela 1: conclusão da caixaria",
+   "valor": "",
+   "status": "Prevista",
+   "obs": "Conforme laudo de medição. Preencher data e valor."
+  },
+  {
+   "num": 2,
+   "data": "",
+   "servico": "Vigas baldrames (mão de obra)",
+   "executor": "Marco Antonio Gomes",
+   "parcela": "Parcela 2: concretagem",
+   "valor": "",
+   "status": "Prevista",
+   "obs": "Conforme laudo de medição. Preencher data e valor."
+  }
+ ],
+ "pagamentos": [],
+ "contratos": [
+  {
+   "num": 1,
+   "contratado": "Horizonte Terraplanagem",
+   "objeto": "Terraplanagem do lote",
+   "valor": "",
+   "assinatura": "",
+   "prazo": "",
+   "status": "Concluído",
+   "obs": "Transporte por Samuel Cabral. Preencher valor e datas."
+  },
+  {
+   "num": 2,
+   "contratado": "Marco Antonio Gomes",
+   "objeto": "Vigas baldrames (somente mão de obra)",
+   "valor": "",
+   "assinatura": "",
+   "prazo": "",
+   "status": "Em execução",
+   "obs": "Pagamento em 2 parcelas: caixaria e concretagem."
+  }
+ ],
+ "arquivos": [],
+ "pastas": [
+  {
+   "num": 1,
+   "secao": "Documentos",
+   "caminho": "Prefeitura",
+   "criada": "2026-10-26"
+  },
+  {
+   "num": 2,
+   "secao": "Documentos",
+   "caminho": "Cartório",
+   "criada": "2026-10-26"
+  },
+  {
+   "num": 3,
+   "secao": "Projetos",
+   "caminho": "Arquitetônico",
+   "criada": "2026-10-26"
+  },
+  {
+   "num": 4,
+   "secao": "Projetos",
+   "caminho": "Estrutural",
+   "criada": "2026-10-26"
+  },
+  {
+   "num": 5,
+   "secao": "Projetos",
+   "caminho": "Hidrossanitário",
+   "criada": "2026-10-26"
+  },
+  {
+   "num": 6,
+   "secao": "Projetos",
+   "caminho": "Elétrico",
+   "criada": "2026-10-26"
+  },
+  {
+   "num": 7,
+   "secao": "Projetos",
+   "caminho": "Modelos IFC",
+   "criada": "2026-10-26"
+  },
+  {
+   "num": 8,
+   "secao": "Contratos",
+   "caminho": "Assinados",
+   "criada": "2026-10-26"
+  }
+ ]
 }

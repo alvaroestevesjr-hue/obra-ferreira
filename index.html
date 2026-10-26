@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Obra Ferreira · Planejamento</title>
+<title>Obra Ferreira · Gestão</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -121,40 +121,109 @@ html,body{margin:0}
 .modal-box h2{font-family:var(--display);font-size:22px;margin:0}
 .modal-box p{margin:0;font-size:14px;color:var(--muted)}
 .modal-box input{font-size:20px;letter-spacing:.3em;font-family:var(--mono)}
+
+/* ---- navegação maior ---- */
+header .wrap{padding-block:14px 0}
+.navwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.tabs{display:flex;gap:6px;padding-block:6px 10px;width:max-content}
+.tab{font-family:var(--display);font-size:18px;font-weight:600;letter-spacing:.02em;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:9px 16px;cursor:pointer;white-space:nowrap;border-bottom-width:1px}
+.tab:hover{border-color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:inset 0 -4px 0 var(--accent)}
+.tab .grp{display:block;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;opacity:.65;margin-bottom:1px}
+/* ---- registros (medições, pagamentos, contratos) ---- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.kpi .l{font-size:12.5px;color:var(--muted)}
+.kpi .v{font-family:var(--display);font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.rec{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 14px;border-top:1px solid var(--line)}
+.rec:first-child{border-top:0}
+.rec .t{font-weight:600}
+.rec .val{font-family:var(--mono);font-size:15px;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.rec .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 12px;font-size:13px;color:var(--muted)}
+.rec .obs{grid-column:1/-1;font-size:13.5px;color:var(--muted);white-space:pre-wrap}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--soft);color:var(--ink);border:1px solid var(--line)}
+.pill.ok{background:color-mix(in srgb,var(--ok) 18%,transparent);border-color:color-mix(in srgb,var(--ok) 45%,transparent)}
+.pill.run{background:color-mix(in srgb,var(--run) 20%,transparent);border-color:color-mix(in srgb,var(--run) 50%,transparent)}
+.pill.bad{background:color-mix(in srgb,var(--dec) 15%,transparent);border-color:color-mix(in srgb,var(--dec) 45%,transparent)}
+/* ---- pastas ---- */
+.crumbs{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font-size:15px}
+.crumbs button{font:600 15px var(--body);background:none;border:0;color:var(--hid);cursor:pointer;padding:2px 4px}
+.crumbs span{color:var(--muted)}
+.fold-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.fold{display:flex;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;cursor:pointer;text-align:left;font:600 14.5px var(--body);color:var(--ink);min-width:0}
+.fold:hover{border-color:var(--muted)}
+.fold svg{flex:none}
+.fold span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fold small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.file{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:11px 14px;border-top:1px solid var(--line)}
+.file:first-child{border-top:0}
+.file .ext{font-family:var(--mono);font-size:11px;font-weight:600;padding:4px 6px;border-radius:4px;background:var(--soft);border:1px solid var(--line);min-width:44px;text-align:center}
+.file .nm{font-weight:500;overflow-wrap:anywhere}
+.file .sub{font-size:12.5px;color:var(--muted)}
+.file .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.inline-form{display:flex;gap:8px;flex-wrap:wrap;align-items:end;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:12px}
+.inline-form label{flex:1 1 200px}
+/* ---- visualizadores ---- */
+.viewer{position:relative;height:min(72vh,720px);min-height:340px;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.viewer .empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);padding:24px;font-size:14.5px}
+.viewer .busy{position:absolute;left:50%;top:12px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:6px 12px;border-radius:5px;font-size:13px;z-index:2}
+.vbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.vbar .name{font-weight:600;font-size:14px;margin-left:auto;overflow-wrap:anywhere}
+.filebtn{position:relative;overflow:hidden}
+.filebtn input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.hint{font-size:13px;color:var(--muted)}
+.btn{font-size:14px;padding:8px 13px}
+@media (min-width:900px){.tabs{flex-wrap:wrap;width:auto}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <div class="eyebrow">Esteves Engenharia · Lote 02, Quadra D · Lagoa das Garças, Cambuí/MG</div>
-    <h1>Obra Ferreira <span>· Planejamento</span></h1>
+    <h1>Obra Ferreira <span>· Gestão da obra</span></h1>
     <div class="topline"><span id="upd">Carregando…</span><button id="refresh" type="button">Atualizar</button><button id="forget-pin" type="button">Esquecer PIN</button></div>
-    <div class="tabs" role="tablist">
-      <button class="tab" role="tab" id="tab-checklist" aria-selected="true" data-tab="checklist">Checklist</button>
-      <button class="tab" role="tab" id="tab-cronograma" aria-selected="false" data-tab="cronograma">Cronograma</button>
-    </div>
+    <nav class="navwrap" aria-label="Seções">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-tab="checklist"><span class="grp">Obra</span>Checklist</button>
+        <button class="tab" role="tab" data-tab="cronograma"><span class="grp">Obra</span>Cronograma</button>
+        <button class="tab" role="tab" data-tab="medicoes"><span class="grp">Financeiro</span>Medições</button>
+        <button class="tab" role="tab" data-tab="pagamentos"><span class="grp">Financeiro</span>Pagamentos</button>
+        <button class="tab" role="tab" data-tab="contratos"><span class="grp">Financeiro</span>Contratos</button>
+        <button class="tab" role="tab" data-tab="documentos"><span class="grp">Arquivos</span>Documentos</button>
+        <button class="tab" role="tab" data-tab="projetos"><span class="grp">Arquivos</span>Projetos</button>
+        <button class="tab" role="tab" data-tab="ifc"><span class="grp">Visualizar</span>Modelo IFC</button>
+        <button class="tab" role="tab" data-tab="cad"><span class="grp">Visualizar</span>Planta DWG/DXF</button>
+      </div>
+    </nav>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div id="status" class="notice">Carregando dados da obra…</div>
-    <section id="view-checklist"></section>
-    <section id="view-cronograma" hidden></section>
+    <section id="view-checklist" class="view"></section>
+    <section id="view-cronograma" class="view" hidden></section>
+    <section id="view-medicoes" class="view" hidden></section>
+    <section id="view-pagamentos" class="view" hidden></section>
+    <section id="view-contratos" class="view" hidden></section>
+    <section id="view-documentos" class="view" hidden></section>
+    <section id="view-projetos" class="view" hidden></section>
+    <section id="view-ifc" class="view" hidden></section>
+    <section id="view-cad" class="view" hidden></section>
   </div>
 </main>
 <div id="toast" class="toast" hidden></div>
 <div id="pin-modal" class="modal" hidden>
   <form id="pin-form" class="modal-box">
     <h2>PIN da equipe</h2>
-    <p>Para alterar o checklist ou o cronograma, digite o PIN. Ele fica salvo neste aparelho.</p>
+    <p>Para alterar ou enviar arquivos, digite o PIN. Ele fica salvo neste aparelho.</p>
     <label for="pin-input">PIN<input id="pin-input" type="password" inputmode="numeric" autocomplete="off" required></label>
     <div class="actions"><button class="btn primary" type="submit">Confirmar</button><button class="btn" type="button" id="pin-cancel">Cancelar</button></div>
   </form>
 </div>
-
 <script>
 /* Endereço da API (Apps Script publicado). Cole aqui a URL que termina em /exec. */
 const API_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+const configured = /^https:\/\/script\.google\.com\//.test(API_URL);
 
 const DISC = [
   {k:"Hidráulica", c:"--hid", resp:"Álvaro"},
@@ -170,13 +239,34 @@ const ST = ["Pendente","Em andamento","Feito"];
 const ST_KEY = {"Pendente":"pendente","Em andamento":"andamento","Feito":"feito"};
 const ST_CRON = ["Previsto","Em andamento","Concluído","Atrasado"];
 
-let items=[], etapas=[], loaded=false, busy=0;
+/* Tabelas de registros (financeiro) */
+const REG = {
+  medicoes: {titulo:"Medições", novo:"Nova medição", principal:"servico", valor:"valor", data:"data",
+    status:["Prevista","Medida","Aprovada","Paga"], ok:["Paga","Aprovada"], run:["Medida"],
+    campos:[{k:"data",l:"Data",t:"date"},{k:"servico",l:"Serviço",t:"text",full:1},{k:"executor",l:"Executor",t:"text"},{k:"parcela",l:"Parcela / etapa",t:"text"},{k:"valor",l:"Valor (R$)",t:"money"},{k:"status",l:"Status",t:"select"},{k:"obs",l:"Observações",t:"area",full:1}],
+    meta:r=>[r.executor,r.parcela], kpis:rs=>[["Total medido",sum(rs.filter(r=>r.status!=="Prevista"))],["Previsto",sum(rs.filter(r=>r.status==="Prevista"))],["Pago",sum(rs.filter(r=>r.status==="Paga"))]]},
+  pagamentos: {titulo:"Pagamentos", novo:"Novo pagamento", principal:"favorecido", valor:"valor", data:"data",
+    status:["A pagar","Pago"], ok:["Pago"], run:["A pagar"],
+    campos:[{k:"data",l:"Data",t:"date"},{k:"favorecido",l:"Favorecido",t:"text"},{k:"referencia",l:"Referência",t:"text",full:1},{k:"valor",l:"Valor (R$)",t:"money"},{k:"forma",l:"Forma",t:"text",list:["PIX","Transferência","Boleto","Dinheiro","Cheque"]},{k:"status",l:"Status",t:"select"},{k:"obs",l:"Observações",t:"area",full:1}],
+    meta:r=>[r.referencia,r.forma], kpis:rs=>[["Pago",sum(rs.filter(r=>r.status==="Pago"))],["A pagar",sum(rs.filter(r=>r.status!=="Pago"))],["Total",sum(rs)]]},
+  contratos: {titulo:"Contratos", novo:"Novo contrato", principal:"contratado", valor:"valor", data:"assinatura",
+    status:["Em negociação","Assinado","Em execução","Concluído"], ok:["Concluído"], run:["Em execução","Assinado"],
+    campos:[{k:"contratado",l:"Contratado",t:"text"},{k:"objeto",l:"Objeto",t:"text",full:1},{k:"valor",l:"Valor (R$)",t:"money"},{k:"assinatura",l:"Assinatura",t:"date"},{k:"prazo",l:"Prazo final",t:"date"},{k:"status",l:"Status",t:"select"},{k:"obs",l:"Observações",t:"area",full:1}],
+    meta:r=>[r.objeto, r.prazo?"Prazo "+fmtData(r.prazo):""], kpis:rs=>[["Contratado",sum(rs)],["Em execução",sum(rs.filter(r=>r.status==="Em execução"))],["Contratos",rs.length,"n"]]},
+};
+
+let D = {checklist:[],cronograma:[],medicoes:[],pagamentos:[],contratos:[],arquivos:[],pastas:[]};
+let loaded=false, busy=0, tab="checklist";
 let fResp=null, editing=null, confirmDel=null, pendingAction=null;
+const pasta = {documentos:"", projetos:"", contratos:""};
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-const configured = /^https:\/\/script\.google\.com\//.test(API_URL);
+const brl=v=>(Number(v)||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+function sum(rs){return rs.reduce((a,r)=>a+(Number(r.valor)||0),0)}
+function fmtData(s){if(!s)return"";const m=String(s).match(/^(\d{4})-(\d{2})-(\d{2})/);return m?`${m[3]}/${m[2]}/${m[1]}`:String(s)}
+function hojeISO(){const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
 
-function toast(msg){const t=$("#toast");t.textContent=msg;t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,2600)}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.hidden=false;clearTimeout(t._h);t._h=setTimeout(()=>t.hidden=true,2800)}
 function getPin(){try{return localStorage.getItem("of-pin")||""}catch(e){return""}}
 function setPin(p){try{p?localStorage.setItem("of-pin",p):localStorage.removeItem("of-pin")}catch(e){}}
 
@@ -185,12 +275,11 @@ async function load(){
   try{
     const r=await fetch(configured?API_URL:"data.json",{cache:"no-store"});const d=await r.json();
     if(!d.ok)throw new Error(d.erro||"erro");
-    items=d.checklist.map(x=>({...x,num:Number(x.num)}));
-    etapas=d.cronograma.map(x=>({...x,num:Number(x.num)}));
+    for(const k in D) D[k]=(d[k]||[]).map(x=>({...x,num:Number(x.num)}));
     loaded=true;
-    if(configured)$("#status").hidden=true;else{$("#status").hidden=false;$("#status").textContent="Modo de visualização. A edição pela página é liberada quando a planilha for conectada."}
-    const at=new Date(d.atualizado);$("#upd").textContent="Atualizado "+at.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
-    if(!document.querySelector("main form:focus-within, #view-cronograma :focus"))render();
+    if(configured)$("#status").hidden=true;else{$("#status").hidden=false;$("#status").textContent="Modo de visualização. Edição e envio de arquivos são liberados quando a planilha for conectada."}
+    const at=new Date(d.atualizado);$("#upd").textContent="Atualizado "+at.toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+    if(!document.querySelector("main form:focus-within, #view-cronograma :focus")&&!editing)render();
   }catch(e){
     $("#status").hidden=false;$("#status").textContent="Não foi possível carregar os dados. Verifique a internet e toque em Atualizar.";
   }
@@ -208,27 +297,33 @@ async function send(body,okMsg){
   try{
     const r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({...body,pin:getPin()})});
     const d=await r.json();
-    if(!d.ok){if(/PIN/.test(d.erro||"")){setPin("");toast("PIN incorreto. Tente de novo.")}else toast(d.erro||"Não foi possível salvar.");await load();return false}
-    if(okMsg)toast(okMsg);await load();return true;
+    if(!d.ok){if(/PIN/.test(d.erro||"")){setPin("");toast("PIN incorreto. Tente de novo.")}else toast(d.erro||"Não foi possível salvar.");return false}
+    if(okMsg)toast(okMsg);editing=null;confirmDel=null;await load();render();return true;
   }catch(e){toast("Sem conexão. Nada foi salvo.");return false}
   finally{busy--}
 }
-function act(body,okMsg,after){needPin(async()=>{if(await send(body,okMsg)&&after)after()})}
+function act(body,okMsg){needPin(()=>send(body,okMsg))}
 
-/* abas */
+/* ---------- abas ---------- */
 function showTab(t){
+  tab=t;editing=null;confirmDel=null;
   document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));
-  $("#view-checklist").hidden=t!=="checklist";$("#view-cronograma").hidden=t!=="cronograma";
+  document.querySelectorAll(".view").forEach(v=>v.hidden=v.id!=="view-"+t);
+  const b=document.querySelector(`.tab[data-tab="${t}"]`);b&&b.scrollIntoView({block:"nearest",inline:"nearest"});
   try{localStorage.setItem("of-tab",t)}catch(e){}
+  render();
 }
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
-try{const h=location.hash.slice(1)||localStorage.getItem("of-tab");if(h==="cronograma")showTab(h)}catch(e){}
-function render(){renderChecklist();renderCrono()}
+function render(){
+  if(!loaded&&tab!=="ifc"&&tab!=="cad")return;
+  ({checklist:renderChecklist,cronograma:renderCrono,medicoes:()=>renderReg("medicoes"),pagamentos:()=>renderReg("pagamentos"),
+    contratos:()=>renderReg("contratos"),documentos:()=>renderPastas("documentos"),projetos:()=>renderPastas("projetos"),
+    ifc:()=>renderViewer("ifc"),cad:()=>renderViewer("cad")})[tab]();
+}
 
 /* ---------- CHECKLIST ---------- */
 function renderChecklist(){
-  const el=$("#view-checklist");
-  if(!loaded){el.innerHTML="";return}
+  const el=$("#view-checklist"), items=D.checklist;
   const vis=items.filter(i=>!fResp||i.responsavel===fResp);
   const byResp=RESP.map(r=>{const a=items.filter(i=>i.responsavel===r);return{r,tot:a.length,ok:a.filter(i=>i.status==="Feito").length,pend:a.filter(i=>i.status!=="Feito").length}}).filter(x=>x.tot);
   let h=`<div class="stack">
@@ -241,13 +336,13 @@ function renderChecklist(){
     const list=vis.filter(i=>i.disciplina===d.k);
     if(fResp&&!list.length)continue;
     h+=`<div class="group" style="--c:var(${d.c})"><div class="group-h"><h2><span class="pipe"></span>${esc(d.k)}</h2><span class="resp">Resp.: ${esc(d.resp)} · ${list.filter(i=>i.status!=="Feito").length} em aberto</span><button class="btn add" data-add="${esc(d.k)}">Adicionar item</button></div><ul class="items">`;
-    if(editing==="new:"+d.k) h+=`<li>${formHtml({disciplina:d.k,responsavel:d.resp,fase:"Antes da laje",status:"Pendente"},true)}</li>`;
+    if(editing==="new:"+d.k) h+=`<li>${ckForm({disciplina:d.k,responsavel:d.resp,fase:"Antes da laje",status:"Pendente"},true)}</li>`;
     for(const i of list){
       const sk=ST_KEY[i.status]||"pendente";
       h+=`<li class="it" data-s="${sk}"><button class="st" data-s="${sk}" data-cycle="${i.num}" title="${esc(i.status)}. Toque para mudar" aria-label="Status: ${esc(i.status)}"></button>
       <div class="txt"><div class="t">${esc(i.item)}</div><div class="meta"><span class="tag">${esc(i.fase)}</span><span>${esc(i.responsavel)}</span>${i.pedido?`<span>Pedido em ${esc(i.pedido)}</span>`:""}<span>${esc(i.status)}</span></div>${i.obs?`<div class="obs">${linkify(esc(i.obs))}</div>`:""}</div>
       <button class="edit-link" data-edit="${i.num}">Editar</button></li>`;
-      if(editing===i.num) h+=`<li>${formHtml(i,false)}</li>`;
+      if(editing===i.num) h+=`<li>${ckForm(i,false)}</li>`;
     }
     if(!list.length&&editing!=="new:"+d.k) h+=`<li class="it"><span></span><div class="txt" style="color:var(--muted)">Sem itens.</div><span></span></li>`;
     h+=`</ul></div>`;
@@ -255,7 +350,7 @@ function renderChecklist(){
   el.innerHTML=h+"</div>";
 }
 function linkify(s){return s.replace(/((?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=[\w-]+)/g,m=>`<a href="${m.startsWith("http")?m:"https://"+m}" target="_blank" rel="noopener">${m}</a>`)}
-function formHtml(i,isNew){
+function ckForm(i,isNew){
   const id=isNew?"novo":i.num;
   return `<form class="ed" data-form="${id}" data-new="${isNew}">
   <label class="full" for="f-item-${id}">Item<input id="f-item-${id}" name="item" value="${esc(i.item)}" required></label>
@@ -269,22 +364,21 @@ function formHtml(i,isNew){
 }
 $("#view-checklist").addEventListener("click",e=>{
   const t=e.target.closest("button");if(!t)return;
-  if(t.dataset.resp!==undefined){fResp=t.dataset.resp||null;renderChecklist();return}
-  if(t.dataset.cycle){const i=items.find(x=>x.num==t.dataset.cycle);if(!i)return;const ns=ST[(ST.indexOf(i.status)+1)%3];
+  if(t.dataset.resp!==undefined){fResp=t.dataset.resp||null;render();return}
+  if(t.dataset.cycle){const i=D.checklist.find(x=>x.num==t.dataset.cycle);if(!i)return;const ns=ST[(ST.indexOf(i.status)+1)%3];
     act({tabela:"checklist",acao:"atualizar",num:i.num,dados:{status:ns}},ns);return}
-  if(t.dataset.edit){const n=Number(t.dataset.edit);editing=editing===n?null:n;confirmDel=null;renderChecklist();return}
-  if(t.dataset.add){editing="new:"+t.dataset.add;renderChecklist();const f=document.getElementById("f-item-novo");f&&f.focus();return}
-  if(t.hasAttribute("data-cancel")){editing=null;confirmDel=null;renderChecklist();return}
-  if(t.dataset.del){confirmDel=Number(t.dataset.del);renderChecklist();return}
-  if(t.dataset.delOk){act({tabela:"checklist",acao:"excluir",num:Number(t.dataset.delOk)},"Item excluído",()=>{editing=null;confirmDel=null;render()})}
+  if(t.dataset.edit){const n=Number(t.dataset.edit);editing=editing===n?null:n;confirmDel=null;render();return}
+  if(t.dataset.add){editing="new:"+t.dataset.add;render();const f=document.getElementById("f-item-novo");f&&f.focus();return}
+  if(t.hasAttribute("data-cancel")){editing=null;confirmDel=null;render();return}
+  if(t.dataset.del){confirmDel=Number(t.dataset.del);render();return}
+  if(t.dataset.delOk)act({tabela:"checklist",acao:"excluir",num:Number(t.dataset.delOk)},"Item excluído");
 });
 $("#view-checklist").addEventListener("submit",e=>{
   e.preventDefault();const f=e.target;const v=Object.fromEntries(new FormData(f));
   v.item=(v.item||"").trim();if(!v.item){toast("Escreva o item.");return}
-  if(f.dataset.new==="true"){
-    const d=new Date();v.pedido=String(d.getDate()).padStart(2,"0")+"/"+String(d.getMonth()+1).padStart(2,"0");
-    act({tabela:"checklist",acao:"adicionar",dados:v},"Item adicionado",()=>{editing=null;render()});
-  }else act({tabela:"checklist",acao:"atualizar",num:Number(f.dataset.form),dados:v},"Salvo",()=>{editing=null;render()});
+  if(f.dataset.new==="true"){const d=new Date();v.pedido=String(d.getDate()).padStart(2,"0")+"/"+String(d.getMonth()+1).padStart(2,"0");
+    act({tabela:"checklist",acao:"adicionar",dados:v},"Item adicionado");}
+  else act({tabela:"checklist",acao:"atualizar",num:Number(f.dataset.form),dados:v},"Salvo");
 });
 
 /* ---------- CRONOGRAMA ---------- */
@@ -293,17 +387,14 @@ const pd=s=>{if(!s)return null;const d=new Date(s+"T12:00:00");return isNaN(d)?n
 const fmt=d=>String(d.getDate()).padStart(2,"0")+"/"+String(d.getMonth()+1).padStart(2,"0");
 function respColor(r){if(/Fernando/.test(r))return"--ele";if(/Cláudia/.test(r))return"--arq";if(/Ferreira/.test(r))return"--dec";if(/Álvaro/.test(r))return"--hid";return"--est"}
 function renderCrono(){
-  const el=$("#view-cronograma");
-  if(!loaded){el.innerHTML="";return}
-  const rows=[...etapas];
+  const el=$("#view-cronograma"), rows=D.cronograma;
   const ds=rows.flatMap(r=>[pd(r.inicio),pd(r.fim)]).filter(Boolean);
   let gantt="";
   if(ds.length){
     let min=new Date(Math.min(...ds)),max=new Date(Math.max(...ds));
     min=new Date(min-((min.getDay()+6)%7)*DAY);
     const weeks=Math.max(1,Math.ceil((max-min)/DAY/7)+1),span=weeks*7*DAY,wk=100/weeks;
-    const pos=d=>((d-min)/span*100);
-    const tp=pos(new Date());
+    const pos=d=>((d-min)/span*100), tp=pos(new Date());
     let wl="";for(let w=0;w<weeks;w++){if(weeks>20&&w%2)continue;wl+=`<span style="left:${(w+.5)*wk}%">${fmt(new Date(+min+w*7*DAY))}</span>`}
     gantt=`<div class="gantt-box"><div class="gantt"><div class="g-head"><span class="eyebrow" style="align-self:end">Semana de</span><div class="g-weeks">${wl}</div></div>
     ${rows.map(r=>{const a=pd(r.inicio),b=pd(r.fim);if(!a||!b)return`<div class="g-row"><span class="lbl">${esc(r.etapa)}</span><div class="g-track" style="--wk:${wk}%"></div></div>`;
@@ -313,7 +404,7 @@ function renderCrono(){
   }
   el.innerHTML=`<div class="stack">
   <div class="sec-h"><h2>Próximas etapas</h2><button class="btn primary" id="add-etapa">Adicionar etapa</button></div>
-  <div class="notice">Datas estimadas. Ajuste direto na tabela: cada alteração salva sozinha. A linha vermelha marca hoje.</div>
+  <div class="hint">Datas estimadas. Ajuste direto na tabela: cada alteração salva sozinha. A linha vermelha marca hoje.</div>
   <div class="legend"><span><i class="pipe" style="--c:var(--hid)"></i>Álvaro</span><span><i class="pipe" style="--c:var(--ele)"></i>Fernando</span><span><i class="pipe" style="--c:var(--arq)"></i>Cláudia Cunha</span><span><i class="pipe" style="--c:var(--dec)"></i>Ferreira ou atrasado</span><span><i class="pipe" style="--c:var(--est)"></i>Equipe da obra</span></div>
   ${gantt||`<div class="notice">Sem etapas com datas ainda.</div>`}
   <div class="table-box"><table><thead><tr><th>#</th><th style="width:26%">Etapa</th><th>Responsável</th><th>Início</th><th>Fim</th><th>Status</th><th style="width:24%">Observações</th><th></th></tr></thead><tbody>
@@ -335,19 +426,203 @@ $("#view-cronograma").addEventListener("change",e=>{
 });
 $("#view-cronograma").addEventListener("click",e=>{
   const t=e.target.closest("button");if(!t)return;
-  if(t.id==="add-etapa"){const last=etapas[etapas.length-1];const ini=last&&last.fim?last.fim:new Date().toISOString().slice(0,10);
+  if(t.id==="add-etapa"){const last=D.cronograma[D.cronograma.length-1];const ini=last&&last.fim?last.fim:hojeISO();
     act({tabela:"cronograma",acao:"adicionar",dados:{etapa:"Nova etapa",responsavel:"Álvaro",inicio:ini,fim:ini,status:"Previsto",obs:""}},"Etapa adicionada");return}
-  if(t.dataset.edel){confirmDel="e"+t.dataset.edel;renderCrono();return}
-  if(t.dataset.edelOk){act({tabela:"cronograma",acao:"excluir",num:Number(t.dataset.edelOk)},"Etapa excluída",()=>{confirmDel=null;render()})}
+  if(t.dataset.edel){confirmDel="e"+t.dataset.edel;render();return}
+  if(t.dataset.edelOk)act({tabela:"cronograma",acao:"excluir",num:Number(t.dataset.edelOk)},"Etapa excluída");
+});
+
+/* ---------- REGISTROS: medições, pagamentos, contratos ---------- */
+function pillClass(cfg,s){return cfg.ok.includes(s)?"ok":cfg.run.includes(s)?"run":""}
+function renderReg(k){
+  const cfg=REG[k], rows=[...D[k]].sort((a,b)=>String(b[cfg.data]||"").localeCompare(String(a[cfg.data]||""))||b.num-a.num);
+  const el=$("#view-"+k);
+  let h=`<div class="stack">
+  <div class="sec-h"><h2>${cfg.titulo}</h2><button class="btn primary" data-rnew>${cfg.novo}</button></div>
+  <div class="kpis">${cfg.kpis(rows).map(([l,v,t])=>`<div class="kpi"><div class="l">${l}</div><div class="v">${t==="n"?v:brl(v)}</div></div>`).join("")}</div>
+  ${editing==="new:"+k?regForm(k,{status:cfg.status[0],[cfg.data]:hojeISO()},true):""}
+  <div class="group">${rows.length?rows.map(r=>`<div class="rec">
+      <div class="t">${esc(r[cfg.principal]||"(sem nome)")}</div>
+      <div class="val">${r.valor!==""&&r.valor!=null?brl(r.valor):"<span class='hint'>valor a informar</span>"}</div>
+      <div class="meta"><span class="pill ${pillClass(cfg,r.status)}">${esc(r.status||"")}</span>${r[cfg.data]?`<span>${fmtData(r[cfg.data])}</span>`:""}${cfg.meta(r).filter(Boolean).map(x=>`<span>${esc(x)}</span>`).join("")}<button class="edit-link" data-redit="${r.num}">Editar</button></div>
+      ${r.obs?`<div class="obs">${esc(r.obs)}</div>`:""}
+    </div>${editing===k+r.num?regForm(k,r,false):""}`).join(""):`<div class="rec"><div class="hint">Nenhum registro ainda. Toque em "${cfg.novo}".</div></div>`}</div>
+  ${k==="contratos"?`<div class="sec-h"><h2>Arquivos dos contratos</h2></div><div id="contratos-pastas"></div>`:""}
+  </div>`;
+  el.innerHTML=h;
+  if(k==="contratos")renderPastas("contratos",$("#contratos-pastas"));
+}
+function regForm(k,r,isNew){
+  const cfg=REG[k], id=isNew?"novo":r.num;
+  return `<form class="ed reg" data-reg="${k}" data-num="${id}" data-new="${isNew}">
+  ${cfg.campos.map(c=>{const fid=`r-${k}-${c.k}-${id}`, v=r[c.k]??"";
+    let inp;
+    if(c.t==="select")inp=`<select id="${fid}" name="${c.k}">${cfg.status.map(s=>`<option ${s===v?"selected":""}>${s}</option>`).join("")}</select>`;
+    else if(c.t==="area")inp=`<textarea id="${fid}" name="${c.k}">${esc(v)}</textarea>`;
+    else if(c.t==="date")inp=`<input id="${fid}" type="date" name="${c.k}" value="${esc(v)}">`;
+    else if(c.t==="money")inp=`<input id="${fid}" name="${c.k}" inputmode="decimal" placeholder="0,00" value="${v===""?"":String(v).replace(".",",")}">`;
+    else inp=`<input id="${fid}" name="${c.k}" value="${esc(v)}" ${c.list?`list="lst-${c.k}"`:""}>${c.list?`<datalist id="lst-${c.k}">${c.list.map(x=>`<option value="${x}">`).join("")}</datalist>`:""}`;
+    return `<label class="${c.full?"full":""}" for="${fid}">${c.l}${inp}</label>`}).join("")}
+  <div class="actions full"><button class="btn primary" type="submit">Salvar</button><button class="btn" type="button" data-cancel>Cancelar</button>
+  ${isNew?"":(confirmDel===k+r.num?`<button class="btn danger" type="button" data-rdel-ok="${r.num}">Confirmar exclusão</button>`:`<button class="btn danger" type="button" data-rdel="${r.num}">Excluir</button>`)}</div></form>`;
+}
+["medicoes","pagamentos","contratos"].forEach(k=>{
+  const el=$("#view-"+k);
+  el.addEventListener("click",e=>{
+    const t=e.target.closest("button");if(!t||t.closest("#contratos-pastas"))return;
+    if(t.hasAttribute("data-rnew")){editing="new:"+k;render();return}
+    if(t.dataset.redit){const id=k+t.dataset.redit;editing=editing===id?null:id;confirmDel=null;render();return}
+    if(t.hasAttribute("data-cancel")){editing=null;confirmDel=null;render();return}
+    if(t.dataset.rdel){confirmDel=k+t.dataset.rdel;render();return}
+    if(t.dataset.rdelOk)act({tabela:k,acao:"excluir",num:Number(t.dataset.rdelOk)},"Registro excluído");
+  });
+  el.addEventListener("submit",e=>{
+    const f=e.target;if(!f.classList.contains("reg"))return;e.preventDefault();
+    const v=Object.fromEntries(new FormData(f));
+    if("valor" in v){const s=String(v.valor).trim().replace(/\s|R\$/g,"");v.valor=s===""?"":Number(s.replace(/\./g,"").replace(",","."));if(v.valor!==""&&isNaN(v.valor)){toast("Valor inválido.");return}}
+    if(f.dataset.new==="true")act({tabela:k,acao:"adicionar",dados:v},"Registro adicionado");
+    else act({tabela:k,acao:"atualizar",num:Number(f.dataset.num),dados:v},"Salvo");
+  });
+});
+
+/* ---------- PASTAS E ARQUIVOS ---------- */
+const SECAO={documentos:"Documentos",projetos:"Projetos",contratos:"Contratos"};
+const ICON_F=`<svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><path d="M1 4a2 2 0 0 1 2-2h7l2.5 3H23a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2z" fill="var(--accent)" opacity=".85"/></svg>`;
+function extOf(n){const m=String(n).toLowerCase().match(/\.([a-z0-9]+)$/);return m?m[1]:"arq"}
+function subpastas(sec,cur){
+  const all=new Set();
+  D.pastas.filter(p=>p.secao===sec).forEach(p=>all.add(String(p.caminho)));
+  D.arquivos.filter(a=>a.secao===sec&&a.pasta).forEach(a=>all.add(String(a.pasta)));
+  const out=new Set(), pre=cur?cur+"/":"";
+  all.forEach(p=>{if(pre&&!p.startsWith(pre))return;const rest=p.slice(pre.length);if(!rest)return;out.add(pre+rest.split("/")[0])});
+  return [...out].sort((a,b)=>a.localeCompare(b,"pt-BR"));
+}
+function contaDentro(sec,path){return D.arquivos.filter(a=>a.secao===sec&&(a.pasta===path||String(a.pasta).startsWith(path+"/"))).length}
+function renderPastas(k,target){
+  const sec=SECAO[k], cur=pasta[k], el=target||$("#view-"+k);
+  const parts=cur?cur.split("/"):[];
+  const subs=subpastas(sec,cur), files=D.arquivos.filter(a=>a.secao===sec&&String(a.pasta||"")===cur);
+  const pastaReg=D.pastas.find(p=>p.secao===sec&&p.caminho===cur);
+  const vazia=cur&&!subs.length&&!files.length;
+  el.innerHTML=`<div class="stack" data-pk="${k}">
+  ${target?"":`<div class="sec-h"><h2>${sec}</h2></div>`}
+  <div class="crumbs"><button data-go="">${sec}</button>${parts.map((p,i)=>`<span>/</span><button data-go="${esc(parts.slice(0,i+1).join("/"))}">${esc(p)}</button>`).join("")}</div>
+  <div class="toolbar">
+    <button class="btn" data-newfolder>Nova pasta</button>
+    <label class="btn primary filebtn">Enviar arquivo<input type="file" data-upload multiple aria-label="Enviar arquivo"></label>
+    ${vazia&&pastaReg?(confirmDel==="p"+pastaReg.num?`<button class="btn danger" data-pdel-ok="${pastaReg.num}">Confirmar exclusão da pasta</button>`:`<button class="btn danger" data-pdel="${pastaReg.num}">Excluir pasta vazia</button>`):""}
+  </div>
+  ${editing==="pasta:"+k?`<form class="inline-form" data-folderform><label for="nf-${k}">Nome da nova pasta${cur?` dentro de ${esc(cur)}`:""}<input id="nf-${k}" name="nome" required placeholder="Ex.: Prefeitura"></label><button class="btn primary" type="submit">Criar</button><button class="btn" type="button" data-cancel>Cancelar</button></form>`:""}
+  ${subs.length?`<div class="fold-grid">${subs.map(p=>`<button class="fold" data-go="${esc(p)}">${ICON_F}<span>${esc(p.split("/").pop())}<small>${contaDentro(sec,p)} arquivo(s)</small></span></button>`).join("")}</div>`:""}
+  <div class="group">${files.length?files.map(a=>{const ext=extOf(a.nome), viz=ext==="ifc"?"ifc":(ext==="dwg"||ext==="dxf")?"cad":"";
+    return `<div class="file"><span class="ext">${esc(ext.toUpperCase())}</span><div><div class="nm">${esc(a.nome)}</div><div class="sub">Enviado em ${fmtData(a.enviado)}${a.obs?" · "+esc(a.obs):""}</div></div>
+    <div class="acts">${viz?`<button class="btn" data-viz="${viz}" data-id="${esc(a.fileId)}" data-nome="${esc(a.nome)}">Visualizar</button>`:""}${a.link?`<a class="btn" href="${esc(a.link)}" target="_blank" rel="noopener">Abrir</a>`:""}
+    ${confirmDel==="a"+a.num?`<button class="btn danger" data-adel-ok="${a.num}">Confirmar</button>`:`<button class="edit-link" data-adel="${a.num}">Excluir</button>`}</div></div>`}).join("")
+    :`<div class="rec"><div class="hint">${subs.length?"Nenhum arquivo solto nesta pasta.":"Pasta vazia. Use \"Enviar arquivo\" para adicionar PDFs, imagens, IFC ou DWG."}</div></div>`}</div>
+  </div>`;
+}
+document.querySelector("main").addEventListener("click",e=>{
+  const box=e.target.closest("[data-pk]");if(!box)return;const k=box.dataset.pk, sec=SECAO[k];
+  const t=e.target.closest("button");if(!t)return;
+  const rer=()=>k==="contratos"?renderPastas("contratos",$("#contratos-pastas")):render();
+  if(t.dataset.go!==undefined){pasta[k]=t.dataset.go;editing=null;confirmDel=null;rer();return}
+  if(t.hasAttribute("data-newfolder")){editing="pasta:"+k;rer();const i=document.getElementById("nf-"+k);i&&i.focus();return}
+  if(t.hasAttribute("data-cancel")){editing=null;rer();return}
+  if(t.dataset.pdel){confirmDel="p"+t.dataset.pdel;rer();return}
+  if(t.dataset.pdelOk){act({tabela:"pastas",acao:"excluir",num:Number(t.dataset.pdelOk)},"Pasta excluída");pasta[k]=pasta[k].split("/").slice(0,-1).join("/");return}
+  if(t.dataset.adel){confirmDel="a"+t.dataset.adel;rer();return}
+  if(t.dataset.adelOk){act({tabela:"arquivos",acao:"excluir",num:Number(t.dataset.adelOk)},"Arquivo excluído");return}
+  if(t.dataset.viz){openRemote(t.dataset.viz,t.dataset.id,t.dataset.nome);return}
+});
+document.querySelector("main").addEventListener("submit",e=>{
+  const f=e.target;if(!f.hasAttribute("data-folderform"))return;e.preventDefault();
+  const k=f.closest("[data-pk]").dataset.pk, nome=new FormData(f).get("nome").trim().replace(/\//g,"-");if(!nome)return;
+  const caminho=(pasta[k]?pasta[k]+"/":"")+nome;
+  act({tabela:"pastas",acao:"adicionar",dados:{secao:SECAO[k],caminho,criada:hojeISO()}},"Pasta criada");
+});
+document.querySelector("main").addEventListener("change",e=>{
+  const inp=e.target;if(!inp.matches("[data-upload]"))return;
+  const k=inp.closest("[data-pk]").dataset.pk, files=[...inp.files];inp.value="";if(!files.length)return;
+  needPin(async()=>{
+    for(const f of files){
+      if(f.size>35*1024*1024){toast(`${f.name}: arquivo acima de 35 MB.`);continue}
+      toast(`Enviando ${f.name}…`);
+      const b64=await new Promise((ok,err)=>{const r=new FileReader();r.onload=()=>ok(String(r.result).split(",")[1]);r.onerror=err;r.readAsDataURL(f)});
+      const okk=await send({acao:"upload",dados:{secao:SECAO[k],pasta:pasta[k],nome:f.name,mime:f.type||"application/octet-stream",base64:b64}},`${f.name} enviado`);
+      if(!okk)break;
+    }
+  });
+});
+
+/* ---------- VISUALIZADORES ---------- */
+const VZ={ifc:{nome:"Modelo IFC",ext:[".ifc"],aceita:".ifc",dica:"Gire com um dedo (ou botão esquerdo), arraste com dois dedos (ou botão direito) e aproxime com pinça ou roda do mouse."},
+          cad:{nome:"Planta DWG/DXF",ext:[".dwg",".dxf"],aceita:".dwg,.dxf",dica:"Arraste para mover e use pinça ou a roda do mouse para aproximar. DWG muito recente ou complexo pode não abrir; nesse caso, salve como DXF."}};
+const viewers={ifc:null,cad:null}; let vState={ifc:{nome:""},cad:{nome:""}};
+function renderViewer(k){
+  const cfg=VZ[k], el=$("#view-"+k);
+  if(el.dataset.ready){listaVZ(k);return}
+  el.dataset.ready="1";
+  el.innerHTML=`<div class="stack">
+  <div class="vbar"><label class="btn primary filebtn">Abrir arquivo do aparelho<input type="file" accept="${cfg.aceita}" data-local="${k}" aria-label="Abrir arquivo"></label>
+    <button class="btn" data-reset="${k}">Centralizar</button><span class="name" id="vz-name-${k}"></span></div>
+  <div class="viewer" id="vz-${k}"><div class="empty">Abra um arquivo ${cfg.ext.join(" ou ").toUpperCase()} do seu aparelho ou escolha um da lista abaixo.<br>O arquivo é aberto só no seu navegador.</div></div>
+  <div class="hint">${cfg.dica}</div>
+  <div class="sec-h"><h2>Arquivos da obra</h2></div><div class="group" id="vz-list-${k}"></div></div>`;
+  listaVZ(k);
+}
+function listaVZ(k){
+  const box=$("#vz-list-"+k);if(!box)return;
+  const fs=D.arquivos.filter(a=>VZ[k].ext.some(x=>String(a.nome).toLowerCase().endsWith(x)));
+  box.innerHTML=fs.length?fs.map(a=>`<div class="file"><span class="ext">${esc(extOf(a.nome).toUpperCase())}</span><div><div class="nm">${esc(a.nome)}</div><div class="sub">${esc(a.secao)}${a.pasta?" / "+esc(a.pasta):""}</div></div><div class="acts"><button class="btn" data-viz="${k}" data-id="${esc(a.fileId)}" data-nome="${esc(a.nome)}">Visualizar</button></div></div>`).join("")
+    :`<div class="rec"><div class="hint">Nenhum arquivo ${VZ[k].ext.join("/").toUpperCase()} enviado ainda. Envie em Projetos para ficar disponível para a equipe.</div></div>`;
+}
+async function getViewer(k,kindForFile){
+  const box=$("#vz-"+k);
+  const mod= k==="ifc"?"ifc":kindForFile;
+  if(viewers[k]&&viewers[k].mod!==mod){viewers[k].v.dispose();viewers[k]=null}
+  if(!viewers[k]){
+    box.innerHTML="";
+    const m=await import("./vendor/"+mod+".js");
+    const dark=matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.dataset.theme!=="light"||document.documentElement.dataset.theme==="dark";
+    viewers[k]={mod,v:m.mount(box,{wasmPath:new URL("vendor/",location.href).href,fonts:["vendor/roboto-latin-400-normal.woff","vendor/roboto-latin-ext-400-normal.woff"],background:k==="ifc"?(dark?"#20262a":"#eef0ec"):"#ffffff"})};
+  }
+  return viewers[k].v;
+}
+async function abrirBuffer(k,buf,nome){
+  const ext=extOf(nome), box=$("#vz-"+k);
+  const mod=k==="ifc"?"ifc":(ext==="dwg"?"dwg":"dxf");
+  const busyEl=document.createElement("div");busyEl.className="busy";busyEl.textContent="Abrindo "+nome+"…";box.appendChild(busyEl);
+  try{const v=await getViewer(k,mod);box.appendChild(busyEl);await v.open(buf);$("#vz-name-"+k).textContent=nome;}
+  catch(err){console.error(err);toast(ext==="dwg"?"Não foi possível abrir este DWG. Tente salvar como DXF.":"Não foi possível abrir o arquivo.");}
+  finally{busyEl.remove()}
+}
+async function openRemote(k,id,nome){
+  if(!configured){toast("Disponível quando a planilha for conectada.");return}
+  showTab(k);
+  toast("Baixando "+nome+"…");
+  try{const r=await fetch(API_URL+"?arquivo="+encodeURIComponent(id));const d=await r.json();if(!d.ok)throw new Error(d.erro);
+    const bin=atob(d.base64), u8=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u8[i]=bin.charCodeAt(i);
+    await abrirBuffer(k,u8.buffer,nome);
+  }catch(e){toast("Não foi possível baixar o arquivo.")}
+}
+document.querySelector("main").addEventListener("change",async e=>{
+  const inp=e.target;if(!inp.matches("[data-local]"))return;const k=inp.dataset.local, f=inp.files[0];inp.value="";if(!f)return;
+  await abrirBuffer(k,await f.arrayBuffer(),f.name);
+});
+document.querySelector("main").addEventListener("click",e=>{
+  const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.reset&&viewers[t.dataset.reset])viewers[t.dataset.reset].v.resetView();
+  if(t.dataset.viz&&t.closest(".view")&&t.closest("#vz-list-ifc,#vz-list-cad"))openRemote(t.dataset.viz,t.dataset.id,t.dataset.nome);
 });
 
 /* ---------- início ---------- */
 const dl=document.createElement("datalist");dl.id="resp-list";dl.innerHTML=RESP.map(r=>`<option value="${esc(r)}">`).join("");document.body.appendChild(dl);
 $("#refresh").onclick=()=>{load();toast("Atualizando…")};
 $("#forget-pin").onclick=()=>{setPin("");toast("PIN removido deste aparelho.")};
+(function(){let t="checklist";try{const h=location.hash.slice(1)||localStorage.getItem("of-tab");if(h&&document.querySelector(`.tab[data-tab="${h}"]`))t=h}catch(e){}showTab(t)})();
 load();
-setInterval(()=>{if(!document.hidden&&!busy)load()},60000);
-document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
+setInterval(()=>{if(!document.hidden&&!busy&&!editing)load()},60000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&!editing)load()});
 </script>
 </body>
 </html>
