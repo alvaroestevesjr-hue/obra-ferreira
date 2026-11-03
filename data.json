@@ -64,12 +64,12 @@
   {
    "num": 7,
    "disciplina": "Hidráulica",
-   "item": "Caixas de aço inox",
+   "item": "Reservatório de água em aço inox",
    "responsavel": "Álvaro",
-   "fase": "Decisão",
-   "status": "Pendente",
+   "fase": "Antes da laje",
+   "status": "Em andamento",
    "pedido": "25/10",
-   "obs": "Confirmar com o Ferreira o que são (ralo/caixa sifonada inox ou outro item do vídeo de 25/10)."
+   "obs": "Decidido em 03/11: reservatório em inox. Definir capacidade e modelo, posição sobre a laje, entrada, extravasor, limpeza e saída para o pressurizador."
   },
   {
    "num": 8,
@@ -164,22 +164,22 @@
   {
    "num": 17,
    "disciplina": "Arquitetura",
-   "item": "Escada de acesso ao telhado/laje com alçapão",
+   "item": "Escada de bombeiro (marinheiro) dentro do shaft, com alçapão na laje",
    "responsavel": "Cláudia Cunha",
    "fase": "Antes da laje",
-   "status": "Pendente",
+   "status": "Em andamento",
    "pedido": "12/10 e 25/10",
-   "obs": "Definir local e abertura na laje."
+   "obs": "Decidido em 03/11: acesso à laje pela escada de bombeiro dentro do shaft. Conferir se o shaft comporta a escada e as tubulações juntas e posicionar o alçapão na laje."
   },
   {
    "num": 18,
    "disciplina": "Arquitetura",
-   "item": "Posição dos shafts (hidráulica, coifa, ar-condicionado)",
+   "item": "Posição e dimensão dos shafts (hidráulica, coifa, ar-condicionado e escada de acesso)",
    "responsavel": "Cláudia Cunha",
    "fase": "Antes da laje",
    "status": "Pendente",
    "pedido": "12/10",
-   "obs": ""
+   "obs": "O shaft da escada precisa de espaço livre para subir, além das tubulações."
   },
   {
    "num": 19,
@@ -340,6 +340,16 @@
    "status": "Pendente",
    "pedido": "25/10",
    "obs": ""
+  },
+  {
+   "num": 35,
+   "disciplina": "Estrutura e cobertura",
+   "item": "Carga do reservatório inox na laje e base de apoio",
+   "responsavel": "Álvaro",
+   "fase": "Antes da laje",
+   "status": "Pendente",
+   "pedido": "03/11",
+   "obs": "Considerar o peso do reservatório cheio (cerca de 1 t por 1.000 L) no cálculo da laje e prever a base de apoio."
   }
  ],
  "cronograma": [
@@ -514,7 +524,7 @@
    "obs": ""
   }
  ],
- "atualizado": "2026-10-26T19:20:00Z",
+ "atualizado": "2026-11-03T17:45:00Z",
  "medicoes": [
   {
    "num": 1,
