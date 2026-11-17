@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Estrutura Metálica · RA na obra</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+:root{--bg:#eef1f1;--surface:#fff;--ink:#14201f;--muted:#5b6b6a;--line:#cfd8d7;--brand:#005B68;--brand-ink:#fff;--a:#ee730d;--b:#1a73d9;--viewer:#dfe5e4;
+  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--f-body:"Barlow",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1514;--surface:#162120;--ink:#e3ebea;--muted:#93a5a3;--line:#2a3a39;--brand:#2a9aa8;--brand-ink:#04191c;--viewer:#1b2827;color-scheme:dark}}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.45;
+  padding:max(14px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+header{border-left:5px solid var(--brand);padding:2px 0 2px 12px}
+header small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-size:30px;line-height:1.05;margin:2px 0 0}
+h2{font-family:var(--f-display);font-size:20px;letter-spacing:.05em;text-transform:uppercase;margin:0 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);padding:14px}
+model-viewer{width:100%;height:46vh;min-height:300px;background:var(--viewer);display:block}
+.botoes{display:grid;gap:10px}
+.bt{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 14px;border-radius:4px;font-weight:600;font-size:17px;text-decoration:none;text-align:center;border:2px solid var(--brand)}
+.bt.prim{background:var(--brand);color:var(--brand-ink)}
+.bt.sec{background:transparent;color:var(--ink)}
+.bt img{width:1px;height:1px;opacity:0;position:absolute}
+.bt small{display:block;font-weight:400;font-size:13px;opacity:.85}
+.so{font-size:13px;color:var(--muted);margin:2px 0 0}
+ol{margin:0;padding-left:22px;display:grid;gap:8px}
+.tag{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:4px}
+.planta{width:100%;height:auto;display:block;border:1px solid var(--line);background:#fff}
+.aviso{border-left:4px solid #c78a12;background:color-mix(in srgb,#c78a12 10%,var(--surface))}
+footer{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+footer b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <small>Obra Ferreira · Lagoa das Garças · Cambuí/MG</small>
+    <h1>Estrutura metálica em realidade aumentada</h1>
+  </header>
+
+  <model-viewer id="mv" src="estrutura-ra.glb" ios-src="estrutura-ra.usdz" alt="Estrutura metálica da casa em 3D"
+    camera-controls touch-action="pan-y" shadow-intensity="0.7" exposure="1.05" camera-orbit="35deg 65deg auto"></model-viewer>
+
+  <section class="botoes" aria-label="Abrir em realidade aumentada">
+    <a class="bt prim" id="btReal" href="#">Abrir na obra · escala real 1:1<small id="soReal"></small></a>
+    <a class="bt sec" id="btMaq" href="#">Abrir como maquete · escala livre<small>Para mostrar ao cliente em cima da mesa</small></a>
+    <p class="so" id="soNota"></p>
+  </section>
+
+  <section class="card">
+    <h2>Como ancorar na obra</h2>
+    <ol>
+      <li>Fique no nível da base dos pilares <b>A</b> e <b>B</b> (o nível mais baixo da estrutura). O modelo é apoiado no chão que o celular detectar.</li>
+      <li>Toque em <b>Abrir na obra · escala real</b> e mova o celular devagar, apontando para o chão, até o modelo aparecer.</li>
+      <li>Arraste o modelo até o <span class="tag" style="background:var(--a)"></span><b>disco laranja (pilar A)</b> ficar em cima da base real do pilar A.</li>
+      <li>Gire com dois dedos até o <span class="tag" style="background:var(--b)"></span><b>disco azul (pilar B)</b> cair sobre a base do pilar B, a 16,85 m de A no mesmo alinhamento.</li>
+      <li>Não pince para aumentar ou diminuir: a escala real fica travada. Se mexer sem querer, feche e abra de novo.</li>
+    </ol>
+  </section>
+
+  <img class="planta" src="planta-referencia.png" alt="Planta vista de cima com o pilar A (laranja) e o pilar B (azul), separados por 16,85 m">
+
+  <section class="card aviso">
+    <h2>Precisão</h2>
+    <p style="margin:0">A realidade aumentada do celular serve para conferência visual (posição de pilares, vigas e treliças, interferências). Ela pode desviar alguns centímetros a cada poucos metros, então não use para locação, gabarito ou prumo. Para isso, vale a trena, o nível e as pranchas.</p>
+  </section>
+
+  <footer>Projeto da estrutura metálica: <b>Eng. Dásio Andrade</b>, responsável técnico. Página e modelo de RA desenvolvidos por <b>Esteves Engenharia</b> · Álvaro Esteves.</footer>
+</div>
+<script>
+const abs=f=>new URL(f,location.href).href;
+const glb=abs('estrutura-ra.glb'), usdz=abs('estrutura-ra.usdz'), aqui=location.href.split('#')[0];
+const ua=navigator.userAgent;
+const ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const android=/Android/i.test(ua);
+const titulo=encodeURIComponent('Estrutura metálica · Obra Ferreira');
+function sceneViewer(real){
+  const q=`file=${encodeURIComponent(glb)}&mode=${real?'ar_only':'ar_preferred'}&resizable=${real?'false':'true'}&title=${titulo}`;
+  const pkg=real?'com.google.ar.core':'com.google.android.googlequicksearchbox';
+  return `intent://arvr.google.com/scene-viewer/1.0?${q}#Intent;scheme=https;package=${pkg};action=android.intent.action.VIEW;S.browser_fallback_url=${encodeURIComponent(aqui+'#sem-ra')};end;`;
+}
+function quickLook(el,real){
+  el.setAttribute('rel','ar'); el.href=usdz+(real?'#allowsContentScaling=0':'');
+  const i=document.createElement('img'); i.src='planta-referencia.png'; i.alt=''; el.prepend(i); // Quick Look exige uma imagem dentro do link
+}
+const r=document.getElementById('btReal'), m=document.getElementById('btMaq');
+if(ios){quickLook(r,true);quickLook(m,false);document.getElementById('soReal').textContent='Abre no Quick Look do iPhone';}
+else if(android){r.href=sceneViewer(true);m.href=sceneViewer(false);document.getElementById('soReal').textContent='Abre no Google Scene Viewer (funciona no Edge, Chrome ou Samsung Internet)';}
+else{[r,m].forEach(b=>b.addEventListener('click',e=>{e.preventDefault();}));
+  document.getElementById('soNota').textContent='A realidade aumentada abre no celular. Abra este endereço no Android ou no iPhone: '+aqui;}
+if(location.hash==='#sem-ra') document.getElementById('soNota').textContent='Este celular não abriu a RA. No Android, instale ou atualize o app "Google Play Services para RA" (ARCore) na Play Store e tente de novo.';
+</script>
+</body>
+</html>
